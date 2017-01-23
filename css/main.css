@@ -12,10 +12,23 @@ html {
 @-webkit-viewport { width: device-width; scale: 1; }
 @viewport { width: device-width; scale: 1; }
 
-.left-eye {
-  transition: all .5s linear;
+#left-eye {
+  transform: translateX(0);
+  animation: bob 4s ease infinite;
 }
 
-.right-eye {
-  transition: all .5s linear;
+#right-eye {
+  transform: translateX(0);
+  animation: bob 4s ease infinite;
+}
+
+@keyframes bob {
+
+  0% {
+    transform: translateX(0);
+  }
+  
+  100% {
+    transform: translateX(8px);
+  }
 }
