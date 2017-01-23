@@ -12,14 +12,30 @@ html {
 @-webkit-viewport { width: device-width; scale: 1; }
 @viewport { width: device-width; scale: 1; }
 
+.bear:hover #left-ear {
+  transform: translateY(-8px);
+}
+
+#left-ear {
+  transition: .5s ease;
+}
+
+.bear:hover #right-ear {
+  transform: translateY(-8px);
+}
+
+#right-ear {
+  transition: .5s ease;
+}
+
 #left-eye {
   transform: translateX(0);
-  animation: bob 4s ease infinite;
+  animation: bob 2s ease infinite alternate;
 }
 
 #right-eye {
   transform: translateX(0);
-  animation: bob 4s ease infinite;
+  animation: bob 2s ease infinite alternate;
 }
 
 @keyframes bob {
@@ -27,7 +43,7 @@ html {
   0% {
     transform: translateX(0);
   }
-  
+
   100% {
     transform: translateX(8px);
   }
